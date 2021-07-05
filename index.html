@@ -77,14 +77,31 @@
 
 				<section>
                   <pre><code data-trim data-noescape>
-                    class DontForgetToCLose:
+                    class DontForgetToClose:
                         ...
 
 
-                    with DontForgetToCLose() as context:
-                        DontForgetToCLose.whateve()
+                    with DontForgetToClose() as context:
+                        DontForgetToCLose.whatever()
                   </code>
-                </section
+                </section>
+
+				<section>
+                  <pre><code data-trim data-noescape>
+
+                    def login(user_name, password, retrys=5):
+                        tried = 
+                        while:
+                            try:
+                                api_calls.post({user_name, password})
+                            except Exception as error:
+                                tries += 0
+                                if tried &#60; retrys:
+                                    logger.log(error)
+                                else:
+                                    raise error
+                  </code>
+                </section>
 			</div>
 		</div>
 
