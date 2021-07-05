@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                  <pre><code data-trim data-noescape>
+                    from randint import random
+
+                    test_numbers = [ randint(0,255) for _ in range(1000) ]
+                    for current in test_numbers:
+                        print(current)
+                  </code></pre>
+                </section>
+				<section>
+                  <pre><code data-trim data-noescape>
+                    def calculate(self, count, step=1):
+                        result = 0
+                        for index in range(count):
+                            result += self.applicable.taxes.direct
+                            result += self.applicable.taxes.indirect
+                            result -= self.applicable.discount
+                        return result
+                  </code></pre>
+                </section>
+				<section>
+                  <pre><code data-trim data-noescape>
+                    def is_robot(user):
+                        if hasattr(user, 'is_robot'):
+                            return user.is_robot
+                        return False
+                  </code></pre>
+                </section>
+				<section>
+                  <pre><code data-trim data-noescape>
+                    class Rectangle:
+
+                        # ...
+
+                        @property
+                        def area(self):
+                            return self.height * self. width
+
+                    r1 = Retangle()
+                    r1.area = 25
+                  </code>
+                </section>
+
+				<section>
+                  <pre><code data-trim data-noescape>
+                    current = 0
+                    for current in response.json:
+                        if "total" in current:
+                            value += current["total"]
+                  </code>
+                </section>
+
+				<section>
+                  <pre><code data-trim data-noescape>
+                    def increase(number, much=random.ranint(0, 10):
+                        return number + much
+                  </code>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
