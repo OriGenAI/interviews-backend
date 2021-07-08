@@ -18,11 +18,10 @@
 			<div class="slides">
 				<section>
                   <pre><code data-trim data-noescape>
-                    from randint import random
+                    from random import randint
 
-                    test_numbers = [ randint(0,255) for _ in range(1000) ]
-                    for current in test_numbers:
-                        print(current)
+                    def test_numbers(limit=255):
+                        return [ randint(0,255) for _ in range(1000) ]
                   </code></pre>
                 </section>
 				<section>
@@ -46,31 +45,37 @@
                 </section>
 				<section>
                   <pre><code data-trim data-noescape>
-                    class Rectangle:
+                    import math 
 
-                        # ...
+
+                    class Rectangle:
 
                         @property
                         def area(self):
                             return self.height * self. width
 
-                    r1 = Retangle()
+                        def set_area(self, value):
+                            self.height = math.sqrt(value) 
+                            self.width = math.sqrt(value) 
+
+
+                    r1 = Rectangle()
                     r1.area = 25
                   </code>
                 </section>
 
 				<section>
                   <pre><code data-trim data-noescape>
-                    current = 0
+                    total = 0
                     for current in response.json:
                         if "total" in current:
-                            value += current["total"]
+                            total += current["total"]
                   </code>
                 </section>
 
 				<section>
                   <pre><code data-trim data-noescape>
-                    def increase(amount, much=random.randint(0, 10):
+                    def increase(amount, much=random.randint(0, 10)):
                         return amount + much
                   </code>
                 </section>
@@ -90,12 +95,12 @@
                   <pre><code data-trim data-noescape>
 
                     def login(user_name, password, retrys=5):
-                        tried = 
+                        tried = 0 
                         while:
                             try:
                                 api_calls.post({user_name, password})
                             except Exception as error:
-                                tries += 0
+                                tried += 1
                                 if tried &#60; retrys:
                                     logger.log(error)
                                 else:
