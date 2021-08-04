@@ -18,12 +18,33 @@
 			<div class="slides">
 				<section>
                   <pre><code data-trim data-noescape>
-                    from random import randint
+                    print("reading from", filename, 'of size', sizeof(filename))
 
-                    def test_numbers(limit=255):
-                        return [ randint(0,255) for _ in range(1000) ]
+                    with source as open(filename):
+                        while line in source.readline():
+                            print(".", separator='')
                   </code></pre>
                 </section>
+
+				<section>
+                  <pre><code data-trim data-noescape>
+                    from random import randint
+
+                    def test_numbers(count=1000, limit=255):
+                        return [ randint(0, limit) for _ in range(count) ]
+
+                    for current in test_numbers():
+                        print( current + 2 )
+                  </code></pre>
+                </section>
+
+				<section>
+                  <pre><code data-trim data-noescape>
+                    a = ( 1, 2, 3 )
+                    b = [ 1, 2, 3 ]
+                  </code></pre>
+                </section>
+
 				<section>
                   <pre><code data-trim data-noescape>
                     def calculate(self, count, step=1):
@@ -35,6 +56,7 @@
                         return result
                   </code></pre>
                 </section>
+
 				<section>
                   <pre><code data-trim data-noescape>
                     def is_robot(user):
@@ -43,6 +65,16 @@
                         return False
                   </code></pre>
                 </section>
+
+				<section>
+                  <pre><code data-trim data-noescape>
+                    Point = colletions.namedtuple('Point', ['x', 'y', 'z'])
+                    
+                    a = (1, 2, 3)
+                    a[2] = 5
+                  </code></pre>
+                </section>
+
 				<section>
                   <pre><code data-trim data-noescape>
                     import math 
@@ -87,7 +119,7 @@
 
 
                     with DontForgetToClose() as context:
-                        DontForgetToCLose.whatever()
+                        context.whatever()
                   </code>
                 </section>
 				<section>
