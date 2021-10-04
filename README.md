@@ -71,7 +71,7 @@ Today is the day we were able to see all of them, and we want to calculate when 
 
 ## 2 - Satellite model
 
-We also added some information about the satellite model but we have it in a different table. Can you help us listing all the models with the list of satellites associated to it?
+We also added some information about the satellite model but we have it in a different table. Can you help us list all of the models with the list of satellites associated to them?
 
 ```json
 [
