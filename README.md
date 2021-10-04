@@ -55,7 +55,7 @@ You are a scientist at a remote satellite research observatory in Antarctica, tr
 
 We have tracked all the satellites and we have added in our database the number of days that it takes to see the satellite again.
 
-Today is the great day, we were able to see all of them and we want to calculate when are we going to be able to see each satellite again in the next 21 days. Here is an example of the list that we want to create:
+Today is the day we were able to see all of them, and we want to calculate when are we going to be able to see each satellite again in the next 21 days. Here is an example of the list that we want to create:
 
 ```json
 {
